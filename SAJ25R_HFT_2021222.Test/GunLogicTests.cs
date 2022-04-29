@@ -45,22 +45,7 @@ namespace SAJ25R_HFT_2021222.Test
         }
 
 
-        //[Test]
-        //public void TestChangeGunPrice()
-        //{
-        //    Mock<IRetailerRepository> retrepo = new Mock<IRetailerRepository>(MockBehavior.Loose);
-        //    Mock<IOwnerRepository> ownrepo = new Mock<IOwnerRepository>(MockBehavior.Loose);
-        //    Mock<IGunRepository> gunrepo = new Mock<IGunRepository>(MockBehavior.Loose);
-
-        //    Gun gun1 = new Gun() { SerialNumber = 999991, Price = 2300, GunName = "AK47", Weight = 10 };
-        //    Gun gun2 = new Gun() { SerialNumber = 999992, Price = 6000, GunName = "M4", Weight = 14 };
-        //    Gun gun3 = new Gun() { SerialNumber = 999993, Price = 1200, GunName = "Colt", Weight = 3 };
-        //    List<Gun> g = new List<Gun> { gun1, gun2, gun3 };
-
-        //    GunLogic logic = new GunLogic(gunrepo.Object, ownrepo.Object);
-
-        //    Assert.That(() => logic.PriceUpdate(gun3), Throws.Nothing);
-        //}
+      
 
         [Test]
         public void TestRemoveGun()
