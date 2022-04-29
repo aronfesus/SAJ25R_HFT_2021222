@@ -6,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SAJ25R_HFT_2021222.Logic;
+using SAJ25R_HFT_2021222.Repository.DbContextFolder;
+using SAJ25R_HFT_2021222.Repository.Repos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +30,16 @@ namespace SAJ25R_HFT_2021222.Endpoint
         {
 
             services.AddControllers();
+
+
+            services.AddTransient<IGunRepository, GunRepository>();
+            services.AddTransient<IOwnerRepository, OwnerRepository>();
+            services.AddTransient<IRetailerRepository, RetailerRepositroy>();
+            services.AddTransient<IGunLogic, GunLogic>();
+            services.AddTransient<IOwnerLogic, OwnerLogic>();
+            services.AddTransient<IRetailerLogic, RetailerLogic>();
+            services.AddTransient<GunDbContext, GunDbContext>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SAJ25R_HFT_2021222.Endpoint", Version = "v1" });
