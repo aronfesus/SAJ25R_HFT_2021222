@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAJ25R_HFT_2021222.Repository.DbContextFolder;
+using System;
 
 namespace SAJ25R_HFT_2021222.Client
 {
@@ -6,7 +7,7 @@ namespace SAJ25R_HFT_2021222.Client
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+           
         }
     }
 }
