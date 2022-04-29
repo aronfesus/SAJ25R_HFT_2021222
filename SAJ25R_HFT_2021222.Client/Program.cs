@@ -82,6 +82,7 @@ namespace SAJ25R_HFT_2021222.Client
             Console.ReadKey();
         }
 
+
         private static Gun _GetGunByID(int id)
         {
             return rest.Get<Gun>(id, "gun");
