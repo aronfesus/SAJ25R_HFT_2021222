@@ -14,6 +14,7 @@ namespace SAJ25R_HFT_2021222.Models.Tables
     {
         public Gun()
         {
+
         }
 
         public Gun(int ownerId, string gunName, string caliber, int weight, int price)
