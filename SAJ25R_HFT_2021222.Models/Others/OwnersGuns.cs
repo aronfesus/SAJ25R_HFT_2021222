@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAJ25R_HFT_2021222.Models.Tables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace SAJ25R_HFT_2021222.Models.Others
     {
         public string OwnName { get; set; }
 
-        public List<string> Guns { get; set; }
+        public List<Gun> Guns { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -26,7 +27,6 @@ namespace SAJ25R_HFT_2021222.Models.Others
         {
             return 0;
         }
-
 
     }
 }

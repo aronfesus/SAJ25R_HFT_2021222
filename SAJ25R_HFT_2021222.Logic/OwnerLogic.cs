@@ -58,7 +58,7 @@ namespace SAJ25R_HFT_2021222.Logic
                          OwnName = g.Key,
                          Guns = (from owner in g
                                  from gun in owner.Guns
-                                 select (gun.GunName)).ToList()
+                                 select (gun)).ToList()
                      }).ToList();
             return q;
         }
