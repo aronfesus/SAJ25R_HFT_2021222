@@ -1,5 +1,4 @@
-﻿using SAJ25R_HFT_2021222.WpfClient.Windows;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SAJ25R_HFT_2021222.WpfClient
+namespace SAJ25R_HFT_2021222.WpfClient.Windows
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for window2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OwnersGunsWindow : Window
     {
-        public MainWindow()
+        public OwnersGunsWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            OwnersGunsWindow win2 = new OwnersGunsWindow();
-            win2.Show();
-
         }
     }
 }
