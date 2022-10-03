@@ -24,12 +24,6 @@ namespace SAJ25R_HFT_2021222.WpfClient.ViewModels
 
         public RestCollection<Retailer> Retailers { get; set; }
 
-        //public RestCollection<OwnersGuns> OwnersGuns { get; set; }
-
-        //public RestCollection<KeyValuePair<string, double>> SumWeightByOwner { get; set; }
-
-        //public RestCollection<RetailersOwners> RetailersOwners { get; set; }
-
         //Gun Commands
         public ICommand CreateGunCommand { get; set; }
         public ICommand DeleteGunCommand { get; set; }
@@ -121,17 +115,6 @@ namespace SAJ25R_HFT_2021222.WpfClient.ViewModels
                 }
             }
         }
-
-
-
-        //public List<KeyValuePair<string, double>> SumWeightByOwner
-        //{
-        //    get { return rest.Get<KeyValuePair<string, double>>("stat/SumWeightByOwner"); }
-        //}
-
-
-
-
         public static bool IsInDesignMode
         {
             get
@@ -149,9 +132,6 @@ namespace SAJ25R_HFT_2021222.WpfClient.ViewModels
                 Guns = new RestCollection<Gun>("http://localhost:7671/", "gun", "hub");
                 Owners = new RestCollection<Owner>("http://localhost:7671/", "owner", "hub");
                 Retailers = new RestCollection<Retailer>("http://localhost:7671/", "retailer", "hub");
-                //OwnersGuns = new RestCollection<OwnersGuns>("http://localhost:7671/", "stat/OwnsGuns");
-                //SumWeightByOwner = new RestCollection<KeyValuePair<string, double>>("http://localhost:7671/", "stat");
-                //RetailersOwners = new RestCollection<RetailersOwners>("http://localhost:7671/", "stat");
 
                 #region Gun
                 CreateGunCommand = new RelayCommand(() =>
