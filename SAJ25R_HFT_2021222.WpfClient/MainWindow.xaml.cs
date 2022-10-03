@@ -24,13 +24,38 @@ namespace SAJ25R_HFT_2021222.WpfClient
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            OwnersGunsWindow win2 = new OwnersGunsWindow();
+            win2.Show();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            OwnersGunsWindow win2 = new OwnersGunsWindow();
-            win2.Show();
+            GunsOwnersWindow win3 = new GunsOwnersWindow();
+            win3.Show();
+        }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            RetailersOwnersWindow win4 = new RetailersOwnersWindow();
+            win4.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            AVGValueByOwnerWindow win5 = new AVGValueByOwnerWindow();
+            win5.Show();
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            SumWeightByOwnerWindow win6 = new SumWeightByOwnerWindow();
+            win6.Show();
         }
     }
 }

@@ -62,7 +62,7 @@ namespace SAJ25R_HFT_2021222.Logic
                          RetName = g.Key,
                          Owners = (from retailer in g
                                    from owner in retailer.Owners
-                                   select (owner.Name)).ToList()
+                                   select (owner)).ToList()
                      }).ToList();
             return q;
         }

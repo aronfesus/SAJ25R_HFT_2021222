@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SAJ25R_HFT_2021222.Models.Tables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace SAJ25R_HFT_2021222.Models.Others
     {
         public string RetName { get; set; }
 
-        public List<string> Owners { get; set; }
+        public List<Owner> Owners { get; set; }
 
         public override bool Equals(object obj)
         {

@@ -33,7 +33,7 @@
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="1">
             <Label Content="Guns" FontSize="16" FontWeight="Bold"/>
-            <ListBox Height="220" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Guns}" SelectedItem="{Binding SelectedGun}" >
+            <ListBox Height="260" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Guns}" SelectedItem="{Binding SelectedGun}" >
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Label Content="{Binding GunName}"/>
@@ -43,7 +43,7 @@
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="2">
             <Label Content="Retailers" FontSize="16" FontWeight="Bold"/>
-            <ListBox Height="220" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Retailers}" SelectedItem="{Binding SelectedRetailer}">
+            <ListBox Height="260" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding Retailers}" SelectedItem="{Binding SelectedRetailer}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Label Content="{Binding Name}"/>
@@ -80,11 +80,9 @@
                 <Label Content="Job" FontSize="14" Background="LightGray"/>
                 <TextBox Text="{Binding SelectedOwner.Job}"/>
             </StackPanel>
-            <StackPanel Grid.Row="2" Grid.Column="0">
-                <Label Content="Retailer" FontSize="14" Background="LightGray"/>
-                <TextBox Text="{Binding SelectedOwner.Retailer}"/>
-            </StackPanel>
-
+            <Button Grid.Column="0" Grid.Row="4" Content="Owner's guns" Margin="10" Click="Button_Click_1"/>
+            <Button Grid.Column="0" Grid.Row="3" Margin="10" Content="Average value by owner" Click="Button_Click_3"/>
+            <Button Grid.Column="1" Grid.Row="4" Margin="10" Content="Sum weight by owner" Click="Button_Click_4"/>
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="1">
@@ -116,13 +114,48 @@
                 <TextBox Text="{Binding SelectedGun.Price}"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="0">
-                <Label Content="SerialNumber" FontSize="14" Background="LightGray"/>
+                <Label Content="Serial Number" FontSize="14" Background="LightGray"/>
                 <TextBox Text="{Binding SelectedGun.SerialNumber}"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="1">
                 <Label Content="Weight" FontSize="14" Background="LightGray"/>
                 <TextBox Text="{Binding SelectedGun.Weight}"/>
             </StackPanel>
+            <Button Grid.Column="0" Grid.Row="4" Margin="10" Content="Gun's owners" Click="Button_Click"/>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0">
+                <Label Content="Name" FontSize="14" Background="LightGray"/>
+                <TextBox Text="{Binding SelectedRetailer.Name}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <Label Content="Position" FontSize="14" Background="LightGray"/>
+                <TextBox Text="{Binding SelectedRetailer.Position}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="0">
+                <Label Content="Salary" FontSize="14" Background="LightGray"/>
+                <TextBox Text="{Binding SelectedRetailer.Salary}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" Grid.Column="1">
+                <Label Content="Desk ID" FontSize="14" Background="LightGray"/>
+                <TextBox Text="{Binding SelectedRetailer.DeskId}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="0">
+                <Label Content="Seller ID" FontSize="14" Background="LightGray"/>
+                <TextBox Text="{Binding SelectedRetailer.SellerId}"/>
+            </StackPanel>
+            <Button Grid.Column="0" Grid.Row="4" Margin="10" Content="Retailer's clients" Click="Button_Click_2"/>
         </Grid>
         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
             <Button Content="Create Gun" Command="{Binding CreateGunCommand}" Padding="10" Margin="5"/>
@@ -130,17 +163,17 @@
             <Button Content="Update Gun" Command="{Binding UpdateGunCommand}" Padding="10" Margin="5"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical">
-            <Button Content="Create Owner" Command="{Binding CreateGunCommand}" Padding="10" Margin="5"/>
-            <Button Content="Delete Owner" Command="{Binding DeleteGunCommand}" Padding="10" Margin="5"/>
-            <Button Content="Update Owner" Command="{Binding UpdateGunCommand}" Padding="10" Margin="5"/>
+            <Button Content="Create Owner" Command="{Binding CreateOwnerCommand}" Padding="10" Margin="5"/>
+            <Button Content="Delete Owner" Command="{Binding DeleteOwnerCommand}" Padding="10" Margin="5"/>
+            <Button Content="Update Owner" Command="{Binding UpdateOwnerCommand}" Padding="10" Margin="5"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical">
-            <Button Content="Create Retailer" Command="{Binding CreateGunCommand}" Padding="10" Margin="5"/>
-            <Button Content="Delete Retailer" Command="{Binding DeleteGunCommand}" Padding="10" Margin="5"/>
-            <Button Content="Update Retailer" Command="{Binding UpdateGunCommand}" Padding="10" Margin="5"/>
+            <Button Content="Create Retailer" Command="{Binding CreateRetailerCommand}" Padding="10" Margin="5"/>
+            <Button Content="Delete Retailer" Command="{Binding DeleteRetailerCommand}" Padding="10" Margin="5"/>
+            <Button Content="Update Retailer" Command="{Binding UpdateRetailerCommand}" Padding="10" Margin="5"/>
         </StackPanel>
 
-        <Button Grid.Column="2" Grid.Row="1" Content="Second" Click="Button_Click"/>
+        
 
     </Grid>
 </Window>

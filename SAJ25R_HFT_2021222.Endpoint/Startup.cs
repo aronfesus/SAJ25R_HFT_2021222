@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using SAJ25R_HFT_2021222.Endpoint.Services;
 using SAJ25R_HFT_2021222.Logic;
 using SAJ25R_HFT_2021222.Repository.DbContextFolder;
 using SAJ25R_HFT_2021222.Repository.Repos;
@@ -40,6 +41,8 @@ namespace SAJ25R_HFT_2021222.Endpoint
             services.AddTransient<IRetailerLogic, RetailerLogic>();
             services.AddTransient<GunDbContext, GunDbContext>();
 
+            services.AddSignalR();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "SAJ25R_HFT_2021222.Endpoint", Version = "v1" });
@@ -63,6 +66,7 @@ namespace SAJ25R_HFT_2021222.Endpoint
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<SignalRHub>("/hub");
             });
         }
     }
