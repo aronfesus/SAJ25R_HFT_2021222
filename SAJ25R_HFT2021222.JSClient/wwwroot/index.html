@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gun UI</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Gun List</h1>
+
+    <div id="formdiv">
+        <label>Gun Name</label>
+        <input type="text" id="gunName" />
+        <br />
+        <label>Owner ID</label>
+        <input type="number" id="ownerID" />
+        <br />
+        <label>Caliber</label>
+        <input type="number" id="caliber" />
+        <br />
+        <label>Weight</label>
+        <input type="number" id="weight" />
+        <br />
+        <label>Price</label>
+        <input type="text" id="price" />
+
+        <button type="button" onclick="create()">Add Gun</button>
+    </div>
+
+
+    <table>
+       <thead>
+           <tr>
+               <td>Serial Number</td>
+               <td>Owner ID</td>
+               <td>Name</td>
+               <td>Caliber</td>
+               <td>Weight</td>
+               <td>Price</td>
+               <td id="btntd">Acions</td>
+           </tr>
+       </thead>
+        <tbody id="resultarea">
+           
+        </tbody>
+    </table>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
