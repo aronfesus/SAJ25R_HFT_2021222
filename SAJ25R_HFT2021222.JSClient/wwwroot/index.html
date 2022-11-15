@@ -27,25 +27,43 @@
         <button type="button" onclick="create()">Add Gun</button>
     </div>
 
+    <div id="updateformdiv">
+        <label>Gun Name</label>
+        <input type="text" id="gunNametoupdate" />
+        <br />
+        <label>Owner ID</label>
+        <input type="number" id="ownerIDtoupdate" />
+        <br />
+        <label>Caliber</label>
+        <input type="text" id="calibertoupdate" />
+        <br />
+        <label>Weight</label>
+        <input type="number" id="weighttoupdate" />
+        <br />
+        <label>Price</label>
+        <input type="text" id="pricetoupdate" />
+
+        <button type="button" onclick="update()">Update Gun</button>
+    </div>
+
 
     <table>
-       <thead>
-           <tr>
-               <td>Serial Number</td>
-               <td>Owner ID</td>
-               <td>Name</td>
-               <td>Caliber</td>
-               <td>Weight</td>
-               <td>Price</td>
-               <td id="btntd">Acions</td>
-           </tr>
-       </thead>
+        <thead>
+            <tr>
+                <td>Serial Number</td>
+                <td>Owner ID</td>
+                <td>Name</td>
+                <td>Caliber</td>
+                <td>Weight</td>
+                <td>Price</td>
+                <td id="btntd">Acions</td>
+            </tr>
+        </thead>
         <tbody id="resultarea">
-           
         </tbody>
     </table>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -61,7 +61,7 @@ namespace SAJ25R_HFT_2021222.Endpoint.Controllers
         {
             var gunToDelete = this.gunLogic.GetGunById(id);
             gunLogic.RemoveGunById(id);
-            this.hub.Clients.All.SendAsync("GunUpdated", gunToDelete);
+            this.hub.Clients.All.SendAsync("GunDeleted", gunToDelete);
         }
     }
 }

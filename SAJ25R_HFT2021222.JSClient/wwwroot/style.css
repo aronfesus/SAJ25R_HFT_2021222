@@ -25,6 +25,17 @@ th, td{
     padding: 5px;
 }
 
+#updateformdiv {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#updateformdiv, lable, button, input {
+    margin: 5px;
+    padding: 5px;
+}
+
 #btntd {
     padding-left: 10px;
 }

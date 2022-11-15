@@ -21,6 +21,10 @@ namespace SAJ25R_HFT_2021222.Repository.Repos
         {
             var oldGun = GetById(gun.SerialNumber);
             oldGun.Price = gun.Price;
+            oldGun.GunName = gun.GunName;
+            oldGun.OwnerId = gun.OwnerId;
+            oldGun.Weight = gun.Weight;
+            oldGun.Caliber = gun.Caliber;
             ctx.SaveChanges();
 
         }
